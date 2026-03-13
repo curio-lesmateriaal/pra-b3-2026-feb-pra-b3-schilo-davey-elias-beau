@@ -196,6 +196,7 @@ label{
   clear: both;
 }
 
+/*what position fixed does is that it sets the position of the item and it cant be moved*/
 .logo {
   position: fixed;
   top: 50%;
