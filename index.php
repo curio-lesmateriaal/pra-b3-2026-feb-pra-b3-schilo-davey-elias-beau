@@ -7,10 +7,9 @@
 </head>
 
 <body>
-    <p>Welkom op de website</p>
     <div class="container">
-
-
+        <p class="welkom">Welkom op de website</p>
+        <img class="logo" src="img/placeholder.png" alt="placeholder" width="400px">
     </div>
 
 </body>
