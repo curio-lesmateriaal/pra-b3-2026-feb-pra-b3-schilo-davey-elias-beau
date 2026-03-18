@@ -1,8 +1,12 @@
 <?php
 
-//Haal de configuratie op
-require_once 'config.php';
+$host = 'localhost';
+$dbname = 'takenlijst';
+$username = 'root';
+$password = '';
 
-//Met behulp van PDO zetten we de connectie op, waarna we met setAttribute de manier van errormeldingen weergeven bepalen.
-$conn = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn = new mysqli($host, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die('Databaseverbinding mislukt: ' . $conn->connect_error);
+}

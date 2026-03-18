@@ -1,6 +1,12 @@
-<?php require_once 'backend/config.php'; ?>
+<?php require_once(__DIR__ . '/backend/conn.php'); ?>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<?php echo $base_url; ?>/css/normalize.css">
-<link rel="stylesheet" href="<?php echo $base_url; ?>/css/main.css">
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Takenlijst</title>
+</head>
+<body>
