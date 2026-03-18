@@ -7,12 +7,11 @@
 </head>
 
 <body>
+    <?php require_once 'header.php' ?>
     <div class="container">
-        <?php require_once 'header.php' ?>
         <p class="welkom">Welkom op de website</p>
-        <img class="logo" src="img/placeholder.png" alt="placeholder" width="400px">
+        <img class="logo" src="img/logo-big-fill-only.png" alt="placeholder" width="400px">
     </div>
 
 </body>
-
 </html>

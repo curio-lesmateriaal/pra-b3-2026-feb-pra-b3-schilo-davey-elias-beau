@@ -209,6 +209,29 @@ label{
   font-size: 40px;
 }
 
+.headerContainer{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+header{
+  background-color: green;
+}
+
+nav{
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a{
+  text-decoration: none;
+  padding: 5px;
+  border: yellow solid 2px;
+  border-radius: 5px;
+  color: yellow;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
