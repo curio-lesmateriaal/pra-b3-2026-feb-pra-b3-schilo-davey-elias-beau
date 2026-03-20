@@ -58,5 +58,7 @@ $taken = $result->fetch_all(MYSQLI_ASSOC);
     <p>Er zijn nog geen taken gevonden.</p>
 <?php endif; ?>
 
+<?php require_once 'footer.php' ?>
+
 </body>
 </html>
