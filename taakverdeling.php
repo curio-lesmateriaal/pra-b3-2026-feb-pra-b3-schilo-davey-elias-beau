@@ -48,7 +48,7 @@ $taken = $result->fetch_all(MYSQLI_ASSOC);
                     <td><?php echo htmlspecialchars($taak['deadline'] ?? ''); ?></td>
                     <td><?php echo htmlspecialchars($taak['naam'] ?? ''); ?></td>
                     <td>
-                        <a href="taak-bewerken.php?id=<?php echo $taak['id']; ?>">aanpassen</a>
+                        <a href="tasks/edit.php?id=<?php echo $taak['id']; ?>">aanpassen</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
