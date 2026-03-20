@@ -214,8 +214,9 @@ label{
   margin: 0 auto;
 }
 
-header{
-  background-color: green;
+header {
+    background-color: green;
+    padding: 10px 0;
 }
 
 nav{
@@ -230,6 +231,16 @@ nav a{
   border: yellow solid 2px;
   border-radius: 5px;
   color: yellow;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 /* ==========================================================================
