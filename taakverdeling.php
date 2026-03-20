@@ -13,6 +13,7 @@ $sql = "
         users.naam
     FROM taken
     LEFT JOIN users ON taken.user = users.id
+    WHERE taken.status <> 'done'
     ORDER BY taken.id DESC
 ";
 
