@@ -1,5 +1,7 @@
 <?php
 require_once '../backend/conn.php';
+include '../head.php';
+include '../header.php';
 
 $id = $_GET['id'];
 
