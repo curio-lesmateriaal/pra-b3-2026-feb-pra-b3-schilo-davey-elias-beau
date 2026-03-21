@@ -1,6 +1,7 @@
 <?php
 require_once '../backend/conn.php';
 
+
 $id = $_POST['id'];
 $titel = $_POST['titel'];
 $beschrijving = $_POST['beschrijving'];

@@ -1,5 +1,7 @@
 <?php
 require_once '../backend/conn.php';
+include '../head.php';
+include '../header.php';
 
 $id = $_GET['id'];
 
@@ -34,4 +36,9 @@ $taak = $result->fetch_assoc();
     </select><br><br>
 
     <button type="submit">Opslaan</button>
+    <form action="../backend/meldingenController.php" method="POST">
+        <input type="hidden" name="action" value="delete">
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <input type="submit" value="Verwijderen">
+    </form>
 </form>

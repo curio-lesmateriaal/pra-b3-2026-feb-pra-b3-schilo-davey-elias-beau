@@ -1,7 +1,9 @@
-<?php include 'head.php'; ?>
-<?php include 'header.php'; ?>
+<?php
+include '../head.php';
+include '../header.php';
+?>
 
-<a href="tasks/create.php">Nieuwe taak maken</a>
+<a href="create.php">Nieuwe taak maken</a>
 
 </body>
 </html>
