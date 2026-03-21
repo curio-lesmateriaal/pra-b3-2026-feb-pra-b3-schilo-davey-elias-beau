@@ -1,7 +1,7 @@
 <?php
 require_once '../backend/conn.php';
 include '../head.php';
-include '../header.php';
+require_once '../header.php';
 
 $id = $_GET['id'];
 
@@ -16,23 +16,23 @@ $taak = $result->fetch_assoc();
 
 <h1>Taak aanpassen</h1>
 
-<form method="POST" action="update.php">
-    <input type="hidden" name="id" value="<?= $taak['id'] ?>">
+<form method="POST" action="../backend/tasksController.php?action=update">
+    <input type="hidden" name="id" value="<?php echo $taak['id'] ?>">
 
     Titel:<br>
-    <input type="text" name="titel" value="<?= $taak['titel'] ?>"><br><br>
+    <input type="text" name="titel" value="<?php echo $taak['titel'] ?>"><br><br>
 
     Beschrijving:<br>
-    <textarea name="beschrijving"><?= $taak['beschrijving'] ?></textarea><br><br>
+    <textarea name="beschrijving"><?php echo $taak['beschrijving'] ?></textarea><br><br>
 
     Afdeling:<br>
-    <input type="text" name="afdeling" value="<?= $taak['afdeling'] ?>"><br><br>
+    <input type="text" name="afdeling" value="<?php echo $taak['afdeling'] ?>"><br><br>
 
     Status:<br>
     <select name="status">
-        <option value="todo" <?= $taak['status'] == 'todo' ? 'selected' : '' ?>>Todo</option>
-        <option value="doing" <?= $taak['status'] == 'doing' ? 'selected' : '' ?>>Doing</option>
-        <option value="done" <?= $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
+        <option value="todo" <?php $taak['status'] == 'todo' ? 'selected' : '' ?>>Todo</option>
+        <option value="doing" <?php $taak['status'] == 'doing' ? 'selected' : '' ?>>Doing</option>
+        <option value="done" <?php $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
     </select><br><br>
 
     <button type="submit">Opslaan</button>

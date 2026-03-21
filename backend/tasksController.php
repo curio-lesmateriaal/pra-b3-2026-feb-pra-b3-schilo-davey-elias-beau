@@ -3,7 +3,7 @@ require_once(__DIR__ . '/conn.php');
 
 $action = $_GET['action'] ?? '';
 
-if ($action === 'create') {
+if ($action == 'create') {
     $titel = $_POST['titel'] ?? '';
     $beschrijving = $_POST['beschrijving'] ?? '';
     $afdeling = $_POST['afdeling'] ?? '';
@@ -25,4 +25,22 @@ if ($action === 'create') {
 
     $stmt->close();
     $conn->close();
+}
+
+if ($action == 'update'){
+    $id = $_POST['id'];
+    $titel = $_POST['titel'];
+    $beschrijving = $_POST['beschrijving'];
+    $afdeling = $_POST['afdeling'];
+    $status = $_POST['status'];
+
+    $sql = "UPDATE taken
+            SET titel = ?, beschrijving = ?, afdeling = ?, status = ?
+            WHERE id = ?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssi", $titel, $beschrijving, $afdeling, $status, $id);
+    $stmt->execute();
+
+    header("Location: ../taakverdeling.php");
 }
