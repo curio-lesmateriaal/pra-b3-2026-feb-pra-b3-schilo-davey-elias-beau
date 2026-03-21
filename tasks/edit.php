@@ -42,3 +42,4 @@ $taak = $result->fetch_assoc();
         <input type="submit" value="Verwijderen">
     </form>
 </form>
+<?php require_once '../footer.php' ?>
