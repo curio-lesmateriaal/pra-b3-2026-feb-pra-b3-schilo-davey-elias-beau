@@ -30,16 +30,16 @@ $taak = $result->fetch_assoc();
 
     Status:<br>
     <select name="status">
-        <option value="todo" <?php $taak['status'] == 'todo' ? 'selected' : '' ?>>Todo</option>
-        <option value="doing" <?php $taak['status'] == 'doing' ? 'selected' : '' ?>>Doing</option>
-        <option value="done" <?php $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
+        <option value="todo" <?php echo $taak['status'] == 'todo' ? 'selected' : '' ?>>Todo</option>
+        <option value="doing" <?php echo $taak['status'] == 'doing' ? 'selected' : '' ?>>Doing</option>
+        <option value="done" <?php echo $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
     </select><br><br>
 
     <button type="submit">Opslaan</button>
-    <form action="../backend/meldingenController.php" method="POST">
-        <input type="hidden" name="action" value="delete">
-        <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <input type="submit" value="Verwijderen">
-    </form>
+</form>
+
+<form action="../backend/tasksController.php?action=delete" method="POST" onsubmit="return confirm('Weet u zeker dat u deze taak wilt verwijderen?');">
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+    <button type="submit">Verwijderen</button>
 </form>
 <?php require_once '../footer.php' ?>
