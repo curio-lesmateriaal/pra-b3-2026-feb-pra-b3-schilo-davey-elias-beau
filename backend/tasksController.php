@@ -17,7 +17,7 @@ if ($action == 'create') {
     $stmt->bind_param("ssss", $titel, $beschrijving, $afdeling, $status);
 
     if ($stmt->execute()) {
-        header('Location: ../index.php');
+        header('Location: ../taakverdeling.php');
         exit;
     } else {
         echo 'Fout bij opslaan van taak.';
