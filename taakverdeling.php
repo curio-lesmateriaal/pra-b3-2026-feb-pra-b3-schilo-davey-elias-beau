@@ -25,8 +25,9 @@ $taken = $result->fetch_all(MYSQLI_ASSOC);
 
 <h2>Taakverdeling</h2>
 
+<a href="tasks/create.php">Nieuwe taak aanmaken</a>
+
 <?php if (count($taken) > 0): ?>
-    <a href="tasks/create.php">Nieuwe taak aanmaken</a>
     <table border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>
