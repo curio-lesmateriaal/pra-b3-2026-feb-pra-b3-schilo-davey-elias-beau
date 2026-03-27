@@ -28,12 +28,15 @@ $taak = $result->fetch_assoc();
     Afdeling:<br>
     <input type="text" name="afdeling" value="<?php echo $taak['afdeling'] ?>"><br><br>
 
+    Deadline:<br>
+    <input type="date" name="deadline" value="<?php echo $taak['deadline']?>"><br><br>
+
     Status:<br>
     <select name="status">
         <option value="todo" <?php echo $taak['status'] == 'todo' ? 'selected' : '' ?>>Todo</option>
         <option value="doing" <?php echo $taak['status'] == 'doing' ? 'selected' : '' ?>>Doing</option>
         <option value="done" <?php echo $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
-    </select><br><br>
+    </select><br>
 
     <button type="submit">Opslaan</button>
 </form>

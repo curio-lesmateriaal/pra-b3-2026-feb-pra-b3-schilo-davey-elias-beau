@@ -11,6 +11,9 @@
     <label for="beschrijving">Beschrijving:</label><br>
     <textarea id="beschrijving" name="beschrijving" required></textarea><br><br>
 
+    <label for="deadline">Deadline:</label><br>
+     <input type="date" id="deadline" name="deadline" required><br><br>
+
     <label for="afdeling">Afdeling:</label><br>
     <select id="afdeling" name="afdeling" required>
         <option value="personeel">Personeel</option>
